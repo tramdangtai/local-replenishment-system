@@ -84,7 +84,7 @@ Thêm vào đó, việc ra quyết định mua hàng hoàn toàn **không có d�
      - Kiểm tra kỹ từng Step để xóa bỏ các Step thừa.
      - Dùng thêm function chia theo chức năng của từng nhiệm vụ, giúp kiểm soát M Code tốt hơn
 #### Kết quả
-     - Giảm thời gian load dữ liệu từ **hơn 30 phút xuống còn dưới 5 phút**  
+  - Giảm thời gian load dữ liệu từ **hơn 30 phút xuống còn dưới 5 phút**  
 
 
 ---
