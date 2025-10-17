@@ -61,7 +61,7 @@ Thêm vào đó, việc ra quyết định mua hàng hoàn toàn **không có d�
 | **Excel Power Query** | Tổng hợp và làm sạch dữ liệu từ nhiều nguồn |
 | **Power Pivot (Data Model)** | Tạo mối quan hệ giữa các bảng dữ liệu |
 | **DAX** | Tính toán các chỉ số kinh doanh và chỉ báo hỗ trợ ra quyết định |
-| **Pivot Table / Chart** | Trực quan hóa kết quả và phân tích nhanh |
+| **Pivot Table** | Show ra report và các dữ liệu hỗ trợ ra quyết định |
 | **Folder Structure Optimization** | Quản lý và mở rộng quy trình dữ liệu dễ dàng |
 
 ---
