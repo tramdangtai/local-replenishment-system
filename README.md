@@ -74,7 +74,21 @@ Thêm vào đó, việc ra quyết định mua hàng hoàn toàn **không có d�
 - Kèm theo đó, cũng có dữ liệu để giải thích với cửa hàng, khách hàng rằng hiện tại chúng ta hết hàng và khoảng thời gian có hàng lại.
 #### Kết quả
 - Việc ra quyết định hiện tại càng ngày càng chính xác hơn nữa nhờ vào dữ liệu càng ngày càng đầy đủ.
+
+### 2025.10
+#### Vấn đề
+- Dữ liệu càng ngày càng nhiều, ở phần back end (power query) lúc trước thiết kế để phục vụ việc show ra report, chưa tính đến performance, gây ra hiện tại việc cập nhật dữ liệu tuy đơn giản (chỉ cần bấm refresh) nhưng mất rất nhiều thời gian để đợi.
+#### Giải pháp
+   - Tối ưu hiệu suất Power Query bằng các kỹ thuật nâng cao:
+     - `Table.Buffer`, `List.Buffer`, `Nested Table`
+     - Kiểm tra kỹ từng Step để xóa bỏ các Step thừa.
+     - Dùng thêm function chia theo chức năng của từng nhiệm vụ, giúp kiểm soát M Code tốt hơn
+#### Kết quả
+     - Giảm thời gian load dữ liệu từ **hơn 30 phút xuống còn dưới 5 phút**  
+
+
 ---
+
 
 ## 🛠️ Công cụ & Kỹ thuật sử dụng
 | Công cụ / Kỹ thuật | Mục đích sử dụng |
