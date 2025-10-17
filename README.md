@@ -55,6 +55,27 @@ Thêm vào đó, việc ra quyết định mua hàng hoàn toàn **không có d�
 
 ---
 
+## 💡 Cải tiến
+### 2025.08
+#### Vấn đề
+- Tồn đọng việc khi tạo PO và gửi đến Vendor, Vendor họ phản hồi 1 vài sản phẩm họ đã ngưng kinh doanh. Điều này gây lãng phí trong việc phân tích và tạo PO trên hệ thống, cần phải sửa lại và kèm theo đó là không một ai trong phòng Merchandise biết thông tin trừ Buyer gửi mail cho Vendor.
+#### Giải pháp
+- Thảo luận với team để bổ sung thêm dữ liệu Item Status - thể hiện sản phẩm nào đang hoạt động, sản phẩm nào đã ngừng kinh doanh với mục đích chỉ thực hiện hành động mua hàng đối với các SKU còn hoạt động thôi. Điều này đảm bảo nỗ lực phân tích và ra quyết định chính xác hơn, tránh những nỗ lực "thừa" trong việc sửa lại PO trên hệ thống.
+- Tổ chức dữ liệu Item Status theo Starting Date nhằm tối ưu quản lý dữ liệu khi Vendor thông báo SKU là Stop hay Active (trên report chỉ cần show Item Status với Starting Date cuối cùng)
+#### Kết quả
+- Việc ra quyết định mua hàng càng ngày càng chính xác và hiệu quả hơn, tránh những nỗ lực không cần thiết.
+
+### 2025.09
+#### Vấn đề
+- Một vài Vendor có trạng thái stock của họ không ổn định: lúc thì có hàng, lúc thì hết hàng. Điều này gây khó khăn cho việc tạo PO và nhà cung cấp không giao đúng số lượng trên PO vì họ không còn hàng - trong khi Item Status vẫn là Active.
+#### Giải pháp
+- Tiếp tục thiết kế, show lên Report thêm 1 giá trị nữa là Out Of Stock, nhằm đảm bảo chỉ mua các sản phẩm mà Vendor đang có.
+- Tổ chức dữ liệu theo Out Of Stock có cả Starting Date và Ending Date để các thành viên trong team Mua hàng có thể biết được khi nào sản phẩm đó có hàng lại để thực hiện hành động mua.
+- Kèm theo đó, cũng có dữ liệu để giải thích với cửa hàng, khách hàng rằng hiện tại chúng ta hết hàng và khoảng thời gian có hàng lại.
+#### Kết quả
+- Việc ra quyết định hiện tại càng ngày càng chính xác hơn nữa nhờ vào dữ liệu càng ngày càng đầy đủ.
+---
+
 ## 🛠️ Công cụ & Kỹ thuật sử dụng
 | Công cụ / Kỹ thuật | Mục đích sử dụng |
 |--------------------|----------------|
