@@ -69,7 +69,7 @@ Thêm vào đó, việc ra quyết định mua hàng hoàn toàn **không có d�
 ## 📸 Kết quả
 
 <p align="center">
-  <img src="./Image/StockReplenishment.PNG" alt="Preview thư mục kết quả" width="650">
+  <img src="./Image/LocalReplenishment.PNG" alt="Preview kết quả" width="650">
 </p>
 
 
