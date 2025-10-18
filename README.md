@@ -55,41 +55,75 @@ Thêm vào đó, việc ra quyết định mua hàng hoàn toàn **không có d�
 
 ---
 
-## 💡 Cải tiến
-### 🧭 2025.08
+## 🕒 Lịch sử cập nhật
+<details>
+  <summary>📆 Tháng 07/2025 – Bổ sung các trường dữ liệu cần thiết, hỗ trợ ra quyết định mua hàng hiệu quả</summary>
+
+  ### 🧩 Hành động
+  
+  ✅ Bổ sung trường "Item MOQ" - vì 1 vài sản phẩm bán lẻ, nhưng đóng gói và vận chuyển theo lô, hộp, nên cần có trường này để tiện cho Vendor họ vận chuyển và cửa hàng nhận hàng cũng dễ dàng kiểm đếm.
+  
+  ✅ Bổ sung trường "Vendor MOA" - vì 1 vài Vendor có yêu cầu về số tiền tối thiểu cho mỗi đơn hàng khi mua nhằm tối ưu chi phí vận chuyển của họ, nên Buyer phòng Merchandise cần phải có thông tin này để thực hiện hành động mua hàng phù hợp.
+
+<br>
+
+</details>
+<details>
+  <summary>📆 Tháng 08/2025 – Cải thiện chất lượng ra quyết định mua hàng bằng bổ sung dữ liệu Item Status</summary>
+
 #### 🎯 Vấn đề
 - Tồn đọng việc khi tạo PO và gửi đến Vendor, Vendor họ phản hồi 1 vài sản phẩm họ đã ngưng kinh doanh. Điều này gây lãng phí trong việc phân tích và tạo PO trên hệ thống, cần phải sửa lại và kèm theo đó là không một ai trong phòng Merchandise biết thông tin trừ Buyer gửi mail cho Vendor.
+
 #### ⚙️ Giải pháp
 - Thảo luận với team để bổ sung thêm dữ liệu Item Status - thể hiện sản phẩm nào đang hoạt động, sản phẩm nào đã ngừng kinh doanh với mục đích chỉ thực hiện hành động mua hàng đối với các SKU còn hoạt động thôi. Điều này đảm bảo nỗ lực phân tích và ra quyết định chính xác hơn, tránh những nỗ lực "thừa" trong việc sửa lại PO trên hệ thống.
 - Tổ chức dữ liệu Item Status theo Starting Date nhằm tối ưu quản lý dữ liệu khi Vendor thông báo SKU là Stop hay Active (trên report chỉ cần show Item Status với Starting Date cuối cùng)
+
 #### 🚀 Kết quả
-- Việc ra quyết định mua hàng càng ngày càng chính xác và hiệu quả hơn, tránh những nỗ lực không cần thiết.
+  ✅ Việc ra quyết định mua hàng càng ngày càng chính xác và hiệu quả hơn, tránh những nỗ lực không cần thiết.  
 
-<hr style="height:1px;border:none;color:#333;background-color:#333;">
+<br>
 
-### 🧭 2025.09
+</details>
+
+
+<details>
+  <summary>📆 Tháng 09/2025 – Cải thiện chất lượng ra quyết định mua hàng bằng bổ sung dữ liệu Item Out Of Stock</summary>
+  
 #### 🎯 Vấn đề
 - Một vài Vendor có trạng thái stock của họ không ổn định: lúc thì có hàng, lúc thì hết hàng. Điều này gây khó khăn cho việc tạo PO và nhà cung cấp không giao đúng số lượng trên PO vì họ không còn hàng - trong khi Item Status vẫn là Active.
+
 #### ⚙️ Giải pháp
 - Tiếp tục thiết kế, show lên Report thêm 1 giá trị nữa là Out Of Stock, nhằm đảm bảo chỉ mua các sản phẩm mà Vendor đang có.
 - Tổ chức dữ liệu theo Out Of Stock có cả Starting Date và Ending Date để các thành viên trong team Mua hàng có thể biết được khi nào sản phẩm đó có hàng lại để thực hiện hành động mua.
 - Kèm theo đó, cũng có dữ liệu để giải thích với cửa hàng, khách hàng rằng hiện tại chúng ta hết hàng và khoảng thời gian có hàng lại.
+
 #### 🚀 Kết quả
-- Việc ra quyết định hiện tại càng ngày càng chính xác hơn nữa nhờ vào dữ liệu càng ngày càng đầy đủ.
+✅ Việc ra quyết định hiện tại càng ngày càng chính xác hơn nữa nhờ vào dữ liệu càng ngày càng đầy đủ. Mua đúng sản phẩm đang hoạt động, và có đủ stock từ Vendor.
 
-<hr style="height:1px;border:none;color:#333;background-color:#333;">
+<br>
 
-### 🧭 2025.10
+</details>
+
+
+<details>
+  <summary>📆 Tháng 10/2025 – Cải thiện hiệu suất hoạt động của file Local Replenishment, tốc độ load file, file nhẹ hơn</summary>
+
 #### 🎯 Vấn đề
 - Dữ liệu càng ngày càng nhiều, ở phần back end (power query) lúc trước thiết kế để phục vụ việc show ra report, chưa tính đến performance, gây ra hiện tại việc cập nhật dữ liệu tuy đơn giản (chỉ cần bấm refresh) nhưng mất rất nhiều thời gian để đợi.
+
 #### ⚙️ Giải pháp
    - Tối ưu hiệu suất Power Query bằng các kỹ thuật nâng cao:
      - `Table.Buffer`, `List.Buffer`, `Nested Table`
      - Kiểm tra kỹ từng Step để xóa bỏ các Step thừa.
      - Dùng thêm function chia theo chức năng của từng nhiệm vụ, giúp kiểm soát M Code tốt hơn
-#### 🚀 Kết quả
-  - Giảm thời gian load dữ liệu từ **hơn 30 phút xuống còn dưới 5 phút**  
 
+#### 🚀 Kết quả
+  ✅ Giảm thời gian load dữ liệu từ **hơn 30 phút xuống còn dưới 5 phút**  
+
+
+<br>
+
+</details>
 
 ---
 
