@@ -65,7 +65,7 @@ Thêm vào đó, việc ra quyết định mua hàng hoàn toàn **không có d�
 #### 🚀 Kết quả
 - Việc ra quyết định mua hàng càng ngày càng chính xác và hiệu quả hơn, tránh những nỗ lực không cần thiết.
 
-<hr>
+<hr style="height:1px;border:none;color:#333;background-color:#333;">
 
 ### 🧭 2025.09
 #### 🎯 Vấn đề
@@ -77,7 +77,7 @@ Thêm vào đó, việc ra quyết định mua hàng hoàn toàn **không có d�
 #### 🚀 Kết quả
 - Việc ra quyết định hiện tại càng ngày càng chính xác hơn nữa nhờ vào dữ liệu càng ngày càng đầy đủ.
 
-<hr>
+<hr style="height:1px;border:none;color:#333;background-color:#333;">
 
 ### 🧭 2025.10
 #### 🎯 Vấn đề
