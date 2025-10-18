@@ -106,6 +106,24 @@ Thêm vào đó, việc ra quyết định mua hàng hoàn toàn **không có d�
 
 
 <details>
+  <summary>📆 Tháng 09/2025 – Thống nhất cách thức gửi dữ liệu để cập nhật vào Report</summary>
+  
+#### 🎯 Vấn đề
+- Khi dữ liệu ngày càng nhiều và chưa có một hệ thống hoặc template mẫu để các thành viên có thể gửi đến mình - người quản lý database source cho Report, các thành viên gửi rất riêng lẻ và không được định dạng phù hợp: lúc thì gửi hình ảnh, lúc chỉ fw email và thêm dòng text nhờ cập nhật, lúc lại chỉ nói miệng là nhờ cập nhật cái này cái kia...
+
+#### ⚙️ Giải pháp
+- Tạo ra template excel mẫu với các trường được cố định, các giá trị được cố định sẵn (Data Validation trong Excel) và chuyển giao đến các thành viên trong team. Khi cần cập nhật dữ liệu gì, chỉ cần điền vào template và gửi đến mình là xong. Các giá trị được cố định cũng nhằm kiểm soát chính xác các giá trị khi mình nhận thông tin, dễ dàng trong việc lưu trữ và cập nhật Report.
+- Dùng excel vì thân thiện với các thành viên trong team Merchandise.
+
+#### 🚀 Kết quả
+✅ Nhờ có template, các thành viên làm việc có khuôn mẫu hơn, gửi dữ liệu chính xác hơn, không tự phát như lúc trước, và người làm dữ liệu cũng nhẹ nhàng hơn trong việc cập nhật dữ liệu.
+
+<br>
+
+</details>
+
+
+<details>
   <summary>📆 Tháng 10/2025 – Cải thiện hiệu suất hoạt động của file Local Replenishment, tốc độ load file, file nhẹ hơn</summary>
 
 #### 🎯 Vấn đề
