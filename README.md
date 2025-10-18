@@ -65,6 +65,8 @@ Thêm vào đó, việc ra quyết định mua hàng hoàn toàn **không có d�
 #### 🚀 Kết quả
 - Việc ra quyết định mua hàng càng ngày càng chính xác và hiệu quả hơn, tránh những nỗ lực không cần thiết.
 
+<hr>
+
 ### 🧭 2025.09
 #### 🎯 Vấn đề
 - Một vài Vendor có trạng thái stock của họ không ổn định: lúc thì có hàng, lúc thì hết hàng. Điều này gây khó khăn cho việc tạo PO và nhà cung cấp không giao đúng số lượng trên PO vì họ không còn hàng - trong khi Item Status vẫn là Active.
@@ -74,6 +76,8 @@ Thêm vào đó, việc ra quyết định mua hàng hoàn toàn **không có d�
 - Kèm theo đó, cũng có dữ liệu để giải thích với cửa hàng, khách hàng rằng hiện tại chúng ta hết hàng và khoảng thời gian có hàng lại.
 #### 🚀 Kết quả
 - Việc ra quyết định hiện tại càng ngày càng chính xác hơn nữa nhờ vào dữ liệu càng ngày càng đầy đủ.
+
+<hr>
 
 ### 🧭 2025.10
 #### 🎯 Vấn đề
